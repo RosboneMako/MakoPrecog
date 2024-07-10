@@ -41,7 +41,7 @@ This VST will let the user reduce the lows entering the next VST. This helps cle
 The guitar input signal can be reduced from 30 Hz to 200 Hz.
 
 A setting of 20 Hz (Lowest) turns off the filter to reduce CPU usage.
-
+<br/>
 
 3 BAND EQ  
 A simple EQ is added to enhance certain frequencies entering an amplifier.
@@ -50,7 +50,7 @@ A simple EQ is added to enhance certain frequencies entering an amplifier.
 * 1500 Hz - Used to add some more brightness and presence.
 
 NOTE: Since our EQ circuit adds volume, it can be used to boost distortion.
-
+<br/>
 
 COMPRESSOR  
 A simple Compressor was added to enhance pick attack. This has a fixed attack time of 5 mS. It has two normal compressor adjustments:
@@ -60,7 +60,7 @@ A simple Compressor was added to enhance pick attack. This has a fixed attack ti
 A setting of 1.0 (Full On) means the compressor is OFF and not being used.  
 
 The compressor threshold is drawn on the metering area and an LED will light when the threshold is passed.
-
+<br/>
 
 SIGNAL LEVEL METERING  
 An important aspect of VSTs is getting the guitar signal to an expected level. 
@@ -74,13 +74,13 @@ This VST has Input/Output meters to ease the process of maximizing the signal le
 
 NOTE: The compressor will let the initial pick attacks thru, but will reduce overall volume. 
 and brittle sounding. 
-
+<br/>
 
 DRIVE  
 This VST also adds some slight distortion that may help even out the guitar volume or makes things seem more present. 
 
 When the drive is pushed high, the VST will act as an OD pedal. The EQ section will then really help to dial in the sound. 
-
+<br/>
 
 VST REALTIME DISPLAY OF SIGNAL  
 The VST uses a timer set to a 10 Hz refresh. This means the TIMER callback code will be called 10 times per second. This should be fine for signal monitoring.
