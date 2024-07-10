@@ -73,7 +73,6 @@ On the flip side, certain VST profiles may sound better with reduce input volume
 This VST has Input/Output meters to ease the process of maximizing the signal levels. It also has an OVERLOAD/CLIPPING LED for output signals only.
 
 NOTE: The compressor will let the initial pick attacks thru, but will reduce overall volume. 
-and brittle sounding. 
 <br/><br/>
 
 DRIVE  
