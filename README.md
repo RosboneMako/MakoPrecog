@@ -33,8 +33,8 @@ This VST is designed to accompany and enhance other amplifier VSTs.
 The guitar signal chain thru the VST is:  
 Guitar -> Low Cut -> Noise Gate -> EQ -> Gain -> Compressor
 
-There are many new amplifier VSTs out that rely on user created amplfier profiling. These VSTs can be limited to the fixed state of the profile.
-
+There are many new amplifier VSTs out that rely on user created amplfier profiling. These VSTs can be limited to the fixed state of the user created profile.
+To help make all profiles more useful, this VST adds some guitar preamplifier conditioning features.
 
 LOW CUT  
 This VST will let the user reduce the lows entering the next VST. This helps clean up and reduce boominess.
