@@ -42,7 +42,7 @@ This VST will let the user reduce the lows entering the next VST. This helps cle
 A simple EQ is added to enhance certain frequencies entering an amplifier.
 * 450 Hz - Thickens the guitar tone.
 * 750 Hz - Typical frequency pushed by gain pedals.
-* 1500 Hz - Used to add some more bite.
+* 1500 Hz - Used to add some more brightness and presence.
 
 NOTE: Since our EQ circuit adds volume, it can be used to boost distortion.
 
