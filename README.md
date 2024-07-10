@@ -35,8 +35,13 @@ Guitar -> Low Cut -> Noise Gate -> EQ -> Gain -> Compressor
 
 There are many new amplifier VSTs out that rely on user created amplfier profiling. These VSTs can be limited to the fixed state of the profile.
 
+
 LOW CUT  
 This VST will let the user reduce the lows entering the next VST. This helps clean up and reduce boominess.
+The guitar input signal can be reduced from 30 Hz to 200 Hz.
+
+A setting of 20 Hz (Lowest) turns off the filter to reduce CPU usage.
+
 
 3 BAND EQ  
 A simple EQ is added to enhance certain frequencies entering an amplifier.
@@ -46,6 +51,7 @@ A simple EQ is added to enhance certain frequencies entering an amplifier.
 
 NOTE: Since our EQ circuit adds volume, it can be used to boost distortion.
 
+
 COMPRESSOR  
 A simple Compressor was added to enhance pick attack. This has a fixed attack time of 5 mS. It has two normal compressor adjustments:
 * Threshold - Sets the signal level where the compressor should kick in.
@@ -54,6 +60,7 @@ A simple Compressor was added to enhance pick attack. This has a fixed attack ti
 A setting of 1.0 (Full On) means the compressor is OFF and not being used.  
 
 The compressor threshold is drawn on the metering area and an LED will light when the threshold is passed.
+
 
 SIGNAL LEVEL METERING  
 An important aspect of VSTs is getting the guitar signal to an expected level. 
@@ -73,5 +80,15 @@ DRIVE
 This VST also adds some slight distortion that may help even out the guitar volume or makes things seem more present. 
 
 When the drive is pushed high, the VST will act as an OD pedal. The EQ section will then really help to dial in the sound. 
+
+
+VST REALTIME DISPLAY OF SIGNAL  
+The VST uses a timer set to a 10 Hz refresh. This means the TIMER callback code will be called 10 times per second. This should be fine for signal monitoring.
+The higher the setting, the more often the screen will be redrawn which wastes precious CPU cycles. It is imperitive to reduce CPU usage as much as possible.
+
+To reduce the CPU usage during redraws, a fixed background image is used. All UI elements, knobs, etc that do not need to be animated are in the single background image.
+During redraws only the signal level bars, compressor threshold lines, and KNOB pointers are draw in real time.
+
+Code is included to give a basic drawing of the VST without the use of the background image. This is useful to get positions of the UI elements to make your own background image.
 
 
