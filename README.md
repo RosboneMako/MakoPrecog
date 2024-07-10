@@ -51,5 +51,27 @@ A simple Compressor was added to enhance pick attack. This has a fixed attack ti
 * Threshold - Sets the signal level where the compressor should kick in.
 * Ratio - How much volume reduction to apply when the threshold is crossed.
 
-A setting of 1.0 (Full On) means the compressor is off and not being used.  
+A setting of 1.0 (Full On) means the compressor is OFF and not being used.  
+
+The compressor threshold is drawn on the metering area and an LED will light when the threshold is passed.
+
+SIGNAL LEVEL METERING  
+An important aspect of VSTs is getting the guitar signal to an expected level. 
+* If the signal is too low entering a VST, the sound may be thin.
+* Too much signal can create clipping distortion.
+
+It is important to get the signal as loud as possible without any clipping. This will give the best possible quality when the analog signal is converted to digital.
+On the flip side, certain VST profiles may sound better with reduce input volume. Adjust as needed.
+
+This VST has Input/Output meters to ease the process of maximizing the signal levels. It also has an OVERLOAD/CLIPPING LED for output signals only.
+
+NOTE: The compressor will let the initial pick attacks thru, but will reduce overall volume. 
+and brittle sounding. 
+
+
+DRIVE  
+This VST also adds some slight distortion that may help even out the guitar volume or makes things seem more present. 
+
+When the drive is pushed high, the VST will act as an OD pedal. The EQ section will then really help to dial in the sound. 
+
 
