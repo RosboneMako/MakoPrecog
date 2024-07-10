@@ -89,6 +89,8 @@ The higher the setting, the more often the screen will be redrawn which wastes p
 To reduce the CPU usage during redraws, a fixed background image is used. All UI elements, knobs, etc that do not need to be animated are in the single background image.
 During redraws only the signal level bars, compressor threshold lines, and KNOB pointers are draw in real time.
 
+![Background Image](docs/assets/precogback01.png)
+
 The code in the TIMER tries to track signal level changes and will only call a UI redraw when it is necessary. To do this it converts the signal level to an integer between
 0 and 100 and compares current to last drawn values. A detected difference triggers a redraw.
 
