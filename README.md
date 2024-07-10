@@ -25,27 +25,31 @@ SUMMARY
 A Juce/C++ VST3 written to allow users to finetune a guitar signal
 for use with other amplifier VSTs.
 
-![Demo Image](docs/assets/precogdemo.jpg)
+![Demo Image](docs/assets/precogdemo.png)
 
 # THEORY OF OPERATION<br />
-This VST is designed to mimic a low gain guitar amplifier. It applies an EQ to the guitar signal before it
-applies any gain. 
+This VST is designed to accompany and enhance other amplifier VSTs.
 
 The guitar signal chain thru the VST is:  
-Guitar -> Noise Gate -> EQ -> Gain -> High Cut -> Impulse Response Speaker Sim -> Compressor
+Guitar -> Low Cut -> Noise Gate -> EQ -> Gain -> Compressor
 
-EQ BEFORE GAIN  
-Placing the EQ section before the gain stages gives you full control of the distortion voice. This works best for low to medium gain amplifiers.
-Excessive bass and treble into a high gain stage can sound very bad.  
+There are many new amplifier VSTs out that rely on user created amplfier profiling. These VSTs can be limited to the fixed state of the profile.
+
+LOW CUT  
+This VST will let the user reduce the lows entering the next VST. This helps clean up and reduce boominess.
+
+3 BAND EQ  
+A simple EQ is added to enhance certain frequencies entering an amplifier.
+* 450 Hz - Thickens the guitar tone.
+* 750 Hz - Typical frequency pushed by gain pedals.
+* 1500 Hz - Used to add some more bite.
 
 NOTE: Since our EQ circuit adds volume, it can be used to boost distortion.
 
 COMPRESSOR  
-Since the VST is trying to duplicate and older style cleanish amp, a compressor was added to bring out the
-jingle and allow for close to breakup sounds. 
-
-The single control is for the compressor THRESHOLD. This is the volume the incoming signal must hit to trigger the
-compressor. 
+A simple Compressor was added to enhance pick attack. This has a fixed attack time of 5 mS. It has two normal compressor adjustments:
+* Threshold - Sets the signal level where the compressor should kick in.
+* Ratio - How much volume reduction to apply when the threshold is crossed.
 
 A setting of 1.0 (Full On) means the compressor is off and not being used.  
 
