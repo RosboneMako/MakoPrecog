@@ -96,4 +96,4 @@ The code in the TIMER tries to track signal level changes and will only call a U
 Code is included to give a basic drawing of the VST without the use of the background image. This is useful to get positions of the UI elements to make your own background image.
 Flags in the PAINT and SLIDER need to be set to change from bitmap image to normal drawing mode.
 
-
+![Reference Image](docs/assets/precogreference.png)
